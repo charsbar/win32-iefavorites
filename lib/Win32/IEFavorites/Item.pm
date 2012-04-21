@@ -29,7 +29,11 @@ sub _load {
   my $self = shift;
   my $ini  = Config::IniFiles->new( -file => $self->{path} );
   foreach my $type (qw/URL Modified IconFile IconIndex/) {
-    $self->{lc($type)} = $ini->val('InternetShortcut',$type) || '';
+    if (defined $ini) {
+      $self->{lc($type)} = $ini->val('InternetShortcut',$type) || '';
+    } else {
+      $self->{lc($type)} = '';
+    }
   }
   $self->{cached} = 1;
 }
