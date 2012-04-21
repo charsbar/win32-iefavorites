@@ -3,7 +3,7 @@ package Win32::IEFavorites::DateTime;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.06';
 
 use base qw( DateTime );
 use Win32::FileTime;

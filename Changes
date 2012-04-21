@@ -1,5 +1,10 @@
 Revision history for Perl extension Win32::IEFavorites.
 
+0.06  2012/04/22
+  - resolved #76744: _load in Win32::IEFavorites::Item Fail
+    when a .url file is corrupt or missing information
+    (by Shiraz Qureshi)
+
 0.05  2007/05/27
   - maintenance release: no significant code changes
   - added license info to Makefile.PL
